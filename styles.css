@@ -1,0 +1,37 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fdf6ec;
+  color: #4e342e;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+h1, h2 {
+  color: #bf360c;
+}
+
+.card {
+  background-color: #fff3e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+pre {
+  background-color: #ffe0b2;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+}
+
+code {
+  color: #5d4037;
+}
+
+.highlight {
+  background-color: #ffccbc;
+  padding: 5px 10px;
+  border-radius: 4px;
+}

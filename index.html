@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Derivación y Teorema del Límite Central en Python</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Derivación Sucesiva en Python</h1>
+  <div class="card">
+    <p>Para derivar funciones múltiples veces en Python usamos <span class="highlight">SymPy</span>.</p>
+    <pre><code>from sympy import symbols, diff
+
+x = symbols('x')
+f = x**4 + 3*x**3 - 2*x + 7
+
+# Derivadas sucesivas
+f1 = diff(f, x)       # Primera derivada
+f2 = diff(f, x, 2)    # Segunda derivada
+f3 = diff(f, x, 3)    # Tercera derivada
+
+print(f1)
+print(f2)
+print(f3)</code></pre>
+  </div>
+
+  <h2>Teorema del Límite Central en Python</h2>
+  <div class="card">
+    <p>El Teorema del Límite Central establece que la media de muestras grandes de una población tiende a distribuirse normalmente.</p>
+    <pre><code>import numpy as np
+import matplotlib.pyplot as plt
+
+# Generamos una población no normal
+poblacion = np.random.exponential(scale=2.0, size=100000)
+
+medias = []
+for _ in range(1000):
+    muestra = np.random.choice(poblacion, size=30)
+    medias.append(np.mean(muestra))
+
+# Gráfica de las medias muestrales
+plt.hist(medias, bins=30, color='#ffab73', edgecolor='black')
+plt.title("Distribución de medias (CLT)")
+plt.xlabel("Media muestral")
+plt.ylabel("Frecuencia")
+plt.show()</code></pre>
+  </div>
+
+</body>
+</html>
